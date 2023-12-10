@@ -3,6 +3,11 @@
 @import url("custom.flexslider.css");
 @import url("framework.css");
 
+body {
+    font-family: 'Helvetica', sans-serif;
+    background: linear-gradient(180deg, #F5B5C0 0%, #DA3333 100%);
+}
+
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
@@ -215,7 +220,7 @@ td{border-width:0 1px;}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
-body{color:#474747; background-color:#FFFFFF;}
+/*body{color:#474747; background-color:#FFFFFF;}*/
 a{color:#6677BC;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
@@ -224,7 +229,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#6677BC;}
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
 
-.btn, .btn.inverse:hover, a .icon, a.inverse:hover .icon{color:#FFFFFF; background-color:#6677BC; border-color:#6677BC;}
+/*.btn, .btn.inverse:hover, a .icon, a.inverse:hover .icon{color:#FFFFFF; background-color:#6677BC; border-color:#6677BC;}*/
+.btn, .btn.inverse:hover, a .icon, a.inverse:hover .icon{color:#FFFFFF;}
+
 .btn:hover, .btn.inverse, a:hover .icon, a.inverse .icon{color:inherit; background-color:transparent; border-color:inherit;}
 
 

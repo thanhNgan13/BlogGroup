@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* For PC */
+
+
+
+
+
+/* For tablet and Mobile */
+
+@media (max-width: 1023px) {
+    .teams-introduce .wheel-icon {
+        margin-left: 0;
+    }
+    .btn-rotate {
+        margin: 0;
+    }
+
+    .teams-introduce .teams-introduce-text {
+        height: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .teams-introduce .wheel-icon {
+        margin-left: 30px;
+        margin-bottom: 40px;
+    }
+
+    .teams {
+        flex-wrap: wrap;
+    }
+
+    .teams-introduce .teams-introduce-text {
+        height: auto;
+    }
+    .teams-introduce-text span {
+        font-size: 38px;
+    }
+    .teams-introduce-text h1 {
+        font-size: 27px;
+    }
+    
+}
