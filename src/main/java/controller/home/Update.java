@@ -30,10 +30,13 @@ public class Update extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		
 		Member t = new Member();
 		String id = request.getParameter("id");
 		t.setId(id);
 		String hoten = request.getParameter("name");
+		System.out.println("Update.java line 37: " + hoten );
 		t.setName(hoten);
 		System.out.println("hoten: " + hoten);
 
@@ -58,7 +61,7 @@ public class Update extends HttpServlet {
 		}
 
 
-		String sdt = request.getParameter("sdt");
+		String sdt = request.getParameter("phone");
 		t.setPhone(sdt);
 		String email = request.getParameter("email");
 		t.setEmail(email);

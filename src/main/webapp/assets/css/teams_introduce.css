@@ -131,7 +131,7 @@ html {
   display: flex;
   align-items: center;
   letter-spacing: 0.01em;
-  background: linear-gradient(180deg, #A6D4C3 0%, #81C1AA 100%);
+  background: linear-gradient(180deg, #A6D4C3 0%, #81C1AA 5%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

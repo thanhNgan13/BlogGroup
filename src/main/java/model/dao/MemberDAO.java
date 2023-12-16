@@ -81,6 +81,7 @@ public class MemberDAO {
 			stmt = conn.createStatement();
 
 			String sql = "UPDATE member SET hoten=?, ngaysinh=?, sdt=?, email=?, diachi=?, noidung=? WHERE id=?";
+			System.out.println("line 84: " + t.getName());
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, t.getName());
 			pstmt.setDate(2, new java.sql.Date(t.getBirthday().getTime()));
