@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.bean.Member;
 import model.bo.MemberBO;
@@ -30,7 +31,8 @@ public class PersonalUpdateServlet extends HttpServlet {
 		MemberBO memberBO=new MemberBO();
 		Member t = memberBO.getMemberById(id);
 		System.out.println(t.getName());
-		request.setAttribute("memberInfor", t);
+		HttpSession session = request.getSession();
+		session.setAttribute("memberInfor", t);
 		RequestDispatcher rd=request.getRequestDispatcher("../home/PersonalUpdate.jsp");
 		rd.forward(request, response);
 

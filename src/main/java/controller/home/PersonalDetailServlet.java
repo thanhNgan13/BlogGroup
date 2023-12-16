@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.bean.Member;
 import model.bo.MemberBO;
@@ -27,10 +28,9 @@ public class PersonalDetailServlet extends HttpServlet {
 		MemberBO memberBO=new MemberBO();
 		Member t = memberBO.getMemberById(id);
 		System.out.println("hoten: " + t.getName());
-		request.setAttribute("memberInfor", t);
-		RequestDispatcher rd=request.getRequestDispatcher("../home/PersonalDetail.jsp");
-		rd.forward(request, response);
-		
+		HttpSession session = request.getSession();
+		session.setAttribute("memberInfor", t);
+		response.sendRedirect("../home/PersonalDetail.jsp");
 		
 	}
 

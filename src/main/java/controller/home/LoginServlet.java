@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.bean.Member;
 import model.bo.MemberBO;
@@ -35,15 +36,14 @@ public class LoginServlet extends HttpServlet {
 		
 		if(t!=null)
 		{
-			request.setAttribute("member", t);
-			request.setAttribute("username", username);
-			request.setAttribute("password", password);
-			RequestDispatcher rd=request.getRequestDispatcher("../home/indexMember.jsp");
-			rd.forward(request, response);
+			HttpSession session = request.getSession();
+			session.setAttribute("member", t);
+			session.setAttribute("username", username);
+			response.sendRedirect("../home/indexMember.jsp");
 		}
 		else
 		{
-			RequestDispatcher rd=request.getRequestDispatcher("../home/login.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("../home/error.jsp");
 			rd.forward(request, response);
 		}
 	}

@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.bean.Member;
 import model.bo.MemberBO;
@@ -74,9 +75,9 @@ public class Update extends HttpServlet {
 		memberBO.updateMember(t);
 
 		Member i = memberBO.getMemberById(id);
-		request.setAttribute("memberInfor", i);
-		RequestDispatcher rd = request.getRequestDispatcher("../home/PersonalUpdate.jsp");
-		rd.forward(request, response);
+		HttpSession session = request.getSession();
+		session.setAttribute("memberInfor", i);
+		response.sendRedirect("../home/PersonalUpdate.jsp");
 	}
 
 }
