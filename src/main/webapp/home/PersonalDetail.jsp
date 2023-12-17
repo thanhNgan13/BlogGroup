@@ -31,7 +31,7 @@
                     </div>
                     <div class="fl_right">
                         <ul>
-                            <li><a href="indexMember.jsp"><i class="fa fa-lg fa-home"></i></a></li>
+                            <li><a href="index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
                             <li><a href="login.jsp">Đăng nhập</a></li>
                         </ul>
                     </div>

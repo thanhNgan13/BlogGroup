@@ -26,8 +26,8 @@ username.isEmpty()) { response.sendRedirect("../home/index.jsp"); }
                                 <ul>
                                     <li><a href="indexMember.jsp"><i class="fa fa-lg fa-home"></i></a></li>
                                     <li>
-                                        <a href="PersonalUpdateServlet?id=<%=member.getId()%>">
-                                            <%= username %>
+                                        <a href="PersonalUpdateServlet?id=<%= member.getId()%>">
+                                            <%=  member.getName() %>
                                         </a>
                                     </li>
                                     <li><a href="login.jsp">Đăng xuất</a></li>

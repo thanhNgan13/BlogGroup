@@ -32,7 +32,7 @@
                     </div>
                     <div class="fl_right">
                         <ul>
-                            <li><a href="index.jsp"><i class="fa fa-lg fa-home"></i></a></li>
+                            <li><a href="indexMember.jsp"><i class="fa fa-lg fa-home"></i></a></li>
                             <li>
                                 <a href="../home/PersonalUpdateServlet?id=<%=member.getId()%>">
                                     <%=member.getName()%>
